@@ -1,14 +1,14 @@
 package com.BridgeLabz.java;
 
 public class TestMaximum <T extends Comparable<T>>{
-    T x,y,z;
+    private T x,y,z;
 //constructor
     public TestMaximum(T x, T y, T z) {
         this.x = x;
         this.y = y;
         this.z = z;
     }
-//checking max of three integers
+//checking max of three Generic data
     public static<T extends Comparable<T>> T testMaximum(T x,T y,T z){
         T max=x;//initialising x as greater
         if(y.compareTo(max)>0)
