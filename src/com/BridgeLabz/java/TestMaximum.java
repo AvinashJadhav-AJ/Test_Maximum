@@ -1,16 +1,16 @@
 package com.BridgeLabz.java;
 
-public class TestMaximum {
-    int x,y,z;
+public class TestMaximum <T extends Comparable<T>>{
+    T x,y,z;
 //constructor
-    public TestMaximum(int x, int y, int z) {
+    public TestMaximum(T x, T y, T z) {
         this.x = x;
         this.y = y;
         this.z = z;
     }
 //checking max of three integers
-    public static Integer testMaximum(Integer x,Integer y,Integer z){
-        Integer max=x;//initialising x as greater
+    public static<T extends Comparable<T>> T testMaximum(T x,T y,T z){
+        T max=x;//initialising x as greater
         if(y.compareTo(max)>0)
             max=y;//as of now y is greater
 
@@ -20,8 +20,8 @@ public class TestMaximum {
         return max;
 
     }
-    public static void printMax(Integer x,Integer y,Integer z,Integer max){
+    public static <T>void printMax(T x,T y,T z,T max){
         System.out.printf("the max of %s , %s and %s is %s\n",x,y,z,max);
     }
-
 }
+
